@@ -3,3 +3,4 @@ dist/
 src/
 icons/
 .DS_Store
+index.d.ts
