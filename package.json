@@ -16,7 +16,8 @@
   },
   "files": [
     "dist",
-    "icons"
+    "icons",
+    "index.d.ts"
   ],
   "sideEffects": false,
   "scripts": {
