@@ -1,0 +1,41 @@
+{
+  "name": "vue-health-icons",
+  "version": "1.0.0",
+  "description": "Health Icons as Vue components",
+  "repository": {
+    "url": "esteem-therapeutics/vue-health-icons",
+    "type": "git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.esm.js"
+    }
+  },
+  "files": [
+    "dist",
+    "icons"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npm run build:icons && npm run build:dist",
+    "build:dist": "bili --format esm --format cjs",
+    "build:icons": "node build && babel src/components -d icons"
+  },
+  "author": "Jamie McElwain <jamie@esteemtherapeutics.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
+    "bili": "^5.0.5",
+    "fs-extra": "^8.0.1",
+    "health-icons": "https://github.com/resolvetosavelives/healthicons",
+    "pascal-case": "^2.0.1",
+    "svgo": "^2.3.0"
+  }
+}
